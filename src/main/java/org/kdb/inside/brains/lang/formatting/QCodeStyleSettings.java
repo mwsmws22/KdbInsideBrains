@@ -78,10 +78,10 @@ public class QCodeStyleSettings extends CustomCodeStyleSettings {
     public boolean PARENTHESES_SPACE_BEFORE_SEMICOLON = false;
 
     // Assignment
-    public boolean SPACE_AROUND_ASSIGNMENT_OPERATORS = false;
+    public boolean SPACE_AROUND_ASSIGNMENT_OPERATORS = true;
 
     // Operators
-    public boolean SPACE_AFTER_OPERATOR_COMMA = false;
+    public boolean SPACE_AFTER_OPERATOR_COMMA = true;
     public boolean SPACE_AROUND_OPERATOR_CUT = false;
     public boolean SPACE_AROUND_OPERATOR_ORDER = false;
     public boolean SPACE_AROUND_OPERATOR_WEIGHT = true;

@@ -96,9 +96,12 @@ public class QSpacingStrategy {
         }
 
         // Operators
-        builder.around(VAR_ASSIGNMENT_TYPE).spaceIf(custom.SPACE_AROUND_ASSIGNMENT_OPERATORS);
-        builder.around(VAR_ACCUMULATOR_TYPE).spaceIf(custom.SPACE_AROUND_ASSIGNMENT_OPERATORS);
-        builder.around(COLUMN_ASSIGNMENT_TYPE).spaceIf(custom.SPACE_AROUND_ASSIGNMENT_OPERATORS);
+        builder.before(VAR_ASSIGNMENT_TYPE).spaces(0);
+        builder.before(VAR_ACCUMULATOR_TYPE).spaces(0);
+        builder.before(COLUMN_ASSIGNMENT_TYPE).spaces(0);
+        builder.after(VAR_ASSIGNMENT_TYPE).spaceIf(custom.SPACE_AROUND_ASSIGNMENT_OPERATORS);
+        builder.after(VAR_ACCUMULATOR_TYPE).spaceIf(custom.SPACE_AROUND_ASSIGNMENT_OPERATORS);
+        builder.after(COLUMN_ASSIGNMENT_TYPE).spaceIf(custom.SPACE_AROUND_ASSIGNMENT_OPERATORS);
 
         // Special case - cut can't go between a var
         builder.between(VAR_REFERENCE, OPERATOR_CUT).spaces(1);
